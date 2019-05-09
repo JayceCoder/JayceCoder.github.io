@@ -42,6 +42,31 @@
   </entry>
   
   <entry>
+    <title>常用dos命令</title>
+    <link href="http://yoursite.com/2019/05/06/s1/"/>
+    <id>http://yoursite.com/2019/05/06/s1/</id>
+    <published>2019-05-06T07:20:36.000Z</published>
+    <updated>2019-05-08T06:05:58.575Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="常用dos命令"><a href="#常用dos命令" class="headerlink" title="常用dos命令"></a>常用dos命令</h5><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><code class="hljs undefined">D: 去往D盘<br><br>cd.. 返回上一级目录<br><br>cd 文件名 目录切换到该文件名（子目录）下<br><br>cd \ 直接回根目录<br><br>dir 当前根目录下的文件目录<br><br>dir /s 所有目录<br><br>dir/p 目录多的时候，p用来分屏，显示完一屏后停下来<br><br>dir/w 所有文件一屏内显示，只显示文件和子目录<br><br>dir *.bat 显示所有扩展名是bat的文件,*代表任意字符。*为通配符，可代表多个字符，在分隔符前起作用<br><br>dir a* 显示所有文件名是a的文件，*代表任意字符<br><br>dir a? 显示所有文件名是以a开头，并只有2个字母，？代表任意字符。?为通配符，只能代表1个字符，在分隔符前起作用<br><br>dir /ta 显示目录的文件上次访问时间 access<br><br>dir /tc 显示目录的文件创建时间 creat<br><br>md 文件名 创建目录-make directory<br><br>rd 文件名 移除目录-remove directory 移除的目录中不能有子目录和文件，不能删除当前目录<br><br>copy con 1.txt 建立文件名为1的txt文档 建立后直接跳到文档内容，ctrl+z完成内容编辑<br><br>del 1.txt 删除文件名为1的txt文档 del仅用于文档，rd用于文件<br><br>ren 文件名 新文件名 重命名<br><br>type 1.txt 显示文件1.txt的内容 一般只适用于txt<br><br>tree 显示文件目录树，含最底层目录<br><br>echo 显示此命令后的字符<br><br>echo off 在此语句后所有运行的命令都不显示命令行本身<br><br>pause 暂停<br><br>Ctrl+C 中断操作 比如运行tree很长的时候<br><br>鼠标右键-标注 可选中文本<br><br>鼠标操作-粘贴 可粘贴文本<br><br>F7 查看之前执行的命令 MAC下的win系统，需要加Fn<br><br>help 指令帮助<br><br>cls 清除屏幕<br><br>ver 查看系统版本<br><br>date 查看日期<br><br>time 查看时间<br><br>ipconfig 查看电脑和网络地址<br><br>ipconfig /all 显示所有网络适配器的完整TCP/IP配置信息<br><br>winver 查看windows系统版本<br><br>notepad 打开记事本程序<br><br>mspaint 打开画图程序<br><br>calc 打开计算机程序<br><br>mstsc 远程桌面连接-Microsoft Terminal Server Connection<br><br>regedit 注册表编辑器<br><br>devmgmt 设备管理器程序-device management<br><br>taskmgr 任务管理器-task manager<br><br>tasklist 显示计算机进程<br><br>appwiz.cpl 添加/删除程序-application wizard<br><br>ncpa.cpl 网络连接属性-network control panel applet<br><br>firewall.cpl 防火墙<br><br>control 打开控制面板<br><br>Tab键 补全文件名<br></code></pre></td></tr></table></figure><p>​            </p><p>　　    </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;常用dos命令&quot;&gt;&lt;a href=&quot;#常用dos命令&quot; class=&quot;headerlink&quot; title=&quot;常用dos命令&quot;&gt;&lt;/a&gt;常用dos命令&lt;/h5&gt;&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+      
+    
+    </summary>
+    
+      <category term="dos" scheme="http://yoursite.com/categories/dos/"/>
+    
+    
+      <category term="IT" scheme="http://yoursite.com/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用hexo搭建个人博客</title>
     <link href="http://yoursite.com/2019/05/06/CreateBlogByHexo/"/>
     <id>http://yoursite.com/2019/05/06/CreateBlogByHexo/</id>
@@ -64,31 +89,6 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用dos命令</title>
-    <link href="http://yoursite.com/2019/05/06/s1/"/>
-    <id>http://yoursite.com/2019/05/06/s1/</id>
-    <published>2019-05-06T07:20:36.000Z</published>
-    <updated>2019-05-08T06:05:58.575Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="常用dos命令"><a href="#常用dos命令" class="headerlink" title="常用dos命令"></a>常用dos命令</h5><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><code class="hljs undefined">D: 去往D盘<br><br>cd.. 返回上一级目录<br><br>cd 文件名 目录切换到该文件名（子目录）下<br><br>cd \ 直接回根目录<br><br>dir 当前根目录下的文件目录<br><br>dir /s 所有目录<br><br>dir/p 目录多的时候，p用来分屏，显示完一屏后停下来<br><br>dir/w 所有文件一屏内显示，只显示文件和子目录<br><br>dir *.bat 显示所有扩展名是bat的文件,*代表任意字符。*为通配符，可代表多个字符，在分隔符前起作用<br><br>dir a* 显示所有文件名是a的文件，*代表任意字符<br><br>dir a? 显示所有文件名是以a开头，并只有2个字母，？代表任意字符。?为通配符，只能代表1个字符，在分隔符前起作用<br><br>dir /ta 显示目录的文件上次访问时间 access<br><br>dir /tc 显示目录的文件创建时间 creat<br><br>md 文件名 创建目录-make directory<br><br>rd 文件名 移除目录-remove directory 移除的目录中不能有子目录和文件，不能删除当前目录<br><br>copy con 1.txt 建立文件名为1的txt文档 建立后直接跳到文档内容，ctrl+z完成内容编辑<br><br>del 1.txt 删除文件名为1的txt文档 del仅用于文档，rd用于文件<br><br>ren 文件名 新文件名 重命名<br><br>type 1.txt 显示文件1.txt的内容 一般只适用于txt<br><br>tree 显示文件目录树，含最底层目录<br><br>echo 显示此命令后的字符<br><br>echo off 在此语句后所有运行的命令都不显示命令行本身<br><br>pause 暂停<br><br>Ctrl+C 中断操作 比如运行tree很长的时候<br><br>鼠标右键-标注 可选中文本<br><br>鼠标操作-粘贴 可粘贴文本<br><br>F7 查看之前执行的命令 MAC下的win系统，需要加Fn<br><br>help 指令帮助<br><br>cls 清除屏幕<br><br>ver 查看系统版本<br><br>date 查看日期<br><br>time 查看时间<br><br>ipconfig 查看电脑和网络地址<br><br>ipconfig /all 显示所有网络适配器的完整TCP/IP配置信息<br><br>winver 查看windows系统版本<br><br>notepad 打开记事本程序<br><br>mspaint 打开画图程序<br><br>calc 打开计算机程序<br><br>mstsc 远程桌面连接-Microsoft Terminal Server Connection<br><br>regedit 注册表编辑器<br><br>devmgmt 设备管理器程序-device management<br><br>taskmgr 任务管理器-task manager<br><br>tasklist 显示计算机进程<br><br>appwiz.cpl 添加/删除程序-application wizard<br><br>ncpa.cpl 网络连接属性-network control panel applet<br><br>firewall.cpl 防火墙<br><br>control 打开控制面板<br><br>Tab键 补全文件名<br></code></pre></td></tr></table></figure><p>​            </p><p>　　    </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h5 id=&quot;常用dos命令&quot;&gt;&lt;a href=&quot;#常用dos命令&quot; class=&quot;headerlink&quot; title=&quot;常用dos命令&quot;&gt;&lt;/a&gt;常用dos命令&lt;/h5&gt;&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
-      
-    
-    </summary>
-    
-      <category term="dos" scheme="http://yoursite.com/categories/dos/"/>
-    
-    
-      <category term="IT" scheme="http://yoursite.com/tags/IT/"/>
     
   </entry>
   
