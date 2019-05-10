@@ -247,20 +247,18 @@
 <p>  区别在于String声明的是不可变的对象，每次操作都会生产新的String对象，然后将指针指向新的String对象，而StringBuffer、StringBuilder可以在原有的基础上进行操作，所以经常改变字符串内容的情况下最好不使用String<br><br>StringBuffer和StringBuilder最大的区别在于，StringBuffer是线程安全的，StringBuilder是非线程安全的，但StringBuilder的性能却高于StringBuffer的，所以单线程下推荐使用StringBuilder，多线程下使用StringBuffer。</p>
 </li>
 </ul>
-<h4 id="String类的常用方法"><a href="#String类的常用方法" class="headerlink" title="String类的常用方法"></a>String类的常用方法</h4><ul>
-<li>indexof();返回指定字符的索引</li>
-<li>charAt();返回指定索引处的字符</li>
-<li>replace();字符串替换</li>
-<li>trim();去除字符串两端的空白</li>
-<li>spilt();分割字符串，返回一个分割后的字符串数组</li>
-<li>getBytes();返回字符串的byte类型数组</li>
-<li>length();返回字符串长度</li>
-<li>toLowerCase();将字符串转成小写字符</li>
-<li>toUpperCase();将字符串转成大写字符</li>
-<li>substring();截取字符串</li>
-<li>equals();字符串比较</li>
-</ul>
-
+<h4 id="String类的常用方法"><a href="#String类的常用方法" class="headerlink" title="String类的常用方法"></a>String类的常用方法</h4><pre><code>- indexof();返回指定字符的索引
+- charAt();返回指定索引处的字符
+- replace();字符串替换
+- trim();去除字符串两端的空白
+- spilt();分割字符串，返回一个分割后的字符串数组
+- getBytes();返回字符串的byte类型数组
+- length();返回字符串长度
+- toLowerCase();将字符串转成小写字符
+- toUpperCase();将字符串转成大写字符
+- substring();截取字符串
+- equals();字符串比较
+</code></pre>
     </main>
     <footer class="post-footer">
       
@@ -277,12 +275,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/05/06/s1/" rel="next" title="常用dos命令"><i class="fas fa-angle-left"></i><span class="nav-title">常用dos命令</span></a>
-      
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/05/06/CreateBlogByHexo/" rel="prev" title="使用hexo搭建个人博客"><span class="nav-title">使用hexo搭建个人博客</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/05/06/s1/" rel="prev" title="常用dos命令"><span class="nav-title">常用dos命令</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
