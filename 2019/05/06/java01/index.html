@@ -228,16 +228,14 @@
 <li>引用类型：比较的是引用是否相同。</li>
 </ul>
 <p>equals本质上就是==，只不过String和Integer等重写了equals方法，把它变成了值比较。</p>
-<ul>
-<li>String a = “string”;</li>
-<li>String b = “string”;</li>
-<li>String c = new String(“string”);</li>
-<li>Sytem.out.println(a==b);//true</li>
-<li>Sytem.out.println(a==c);//false</li>
-<li>Sytem.out.println(a.equals(b));//true</li>
-<li>Sytem.out.println(a.equals(c));//true</li>
-</ul>
-<h4 id="final在Java中的作用"><a href="#final在Java中的作用" class="headerlink" title="final在Java中的作用"></a>final在Java中的作用</h4><ul>
+<pre><code>- String a = &quot;string&quot;;
+- String b = &quot;string&quot;;
+- String c = new String(&quot;string&quot;);
+- Sytem.out.println(a==b);//true
+- Sytem.out.println(a==c);//false
+- Sytem.out.println(a.equals(b));//true
+- Sytem.out.println(a.equals(c));//true
+</code></pre><h4 id="final在Java中的作用"><a href="#final在Java中的作用" class="headerlink" title="final在Java中的作用"></a>final在Java中的作用</h4><ul>
 <li>final修饰的类叫最终类，该类不能被继承。</li>
 <li>final修饰的方法不能被重写。</li>
 <li>final修饰的变量叫做常量，常量必须初始化，初始化之后不能被修改。</li>
@@ -279,10 +277,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
+      <a href="/2019/05/06/s1/" rel="next" title="常用dos命令"><i class="fas fa-angle-left"></i><span class="nav-title">常用dos命令</span></a>
+      
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/05/06/s1/" rel="prev" title="常用dos命令"><span class="nav-title">常用dos命令</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/05/06/CreateBlogByHexo/" rel="prev" title="使用hexo搭建个人博客"><span class="nav-title">使用hexo搭建个人博客</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
