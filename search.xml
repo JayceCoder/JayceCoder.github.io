@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>java知识回顾</title>
-      <link href="/2019/05/06/java01/"/>
-      <url>/2019/05/06/java01/</url>
-      
-        <content type="html"><![CDATA[<h5 id="Java是什么？"><a href="#Java是什么？" class="headerlink" title="Java是什么？"></a>Java是什么？</h5><p><a href="https://baike.baidu.com/item/Java/85979" target="_blank" rel="noopener">Java</a>是一门<a href="https://baike.baidu.com/item/面向对象" target="_blank" rel="noopener">面向对象</a>编程语言，不仅吸收了<a href="https://baike.baidu.com/item/C%2B%2B" target="_blank" rel="noopener">C++</a>语言的各种优点，还摒弃了C++里难以理解的<a href="https://baike.baidu.com/item/多继承" target="_blank" rel="noopener">多继承</a>、<a href="https://baike.baidu.com/item/指针/2878304" target="_blank" rel="noopener">指针</a>等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程  。</p><p>Java具有简单性、面向对象、<a href="https://baike.baidu.com/item/分布式/19276232" target="_blank" rel="noopener">分布式</a>、<a href="https://baike.baidu.com/item/健壮性/4430133" target="_blank" rel="noopener">健壮性</a>、<a href="https://baike.baidu.com/item/安全性/7664678" target="_blank" rel="noopener">安全性</a>、平台独立与可移植性、<a href="https://baike.baidu.com/item/多线程/1190404" target="_blank" rel="noopener">多线程</a>、动态性等特点  。Java可以编写<a href="https://baike.baidu.com/item/桌面应用程序/2331979" target="_blank" rel="noopener">桌面应用程序</a>、<a href="https://baike.baidu.com/item/Web应用程序" target="_blank" rel="noopener">Web应用程序</a>、<a href="https://baike.baidu.com/item/分布式系统/4905336" target="_blank" rel="noopener">分布式系统</a>和<a href="https://baike.baidu.com/item/嵌入式系统/186978" target="_blank" rel="noopener">嵌入式系统</a>应用程序等</p><h5 id="JDK与JRE"><a href="#JDK与JRE" class="headerlink" title="JDK与JRE"></a>JDK与JRE</h5><ul><li><p>JRE(Java Runtime Environment)：Java运行环境，为Java的运行提供了环境.</p></li><li><p>JDK(Java Devolopment Kit)：Java开发工具包，提供了Java的开发环境与运行环境.</p><p>注:JDK包含了JRE也包含编译Java源码的Javac以及很多Java程序调试和分析的工具。如果只运行Java程序的话，只需要安装JRE就行了，要编写Java程序就需要安装JDK.</p></li></ul><h5 id="和equals"><a href="#和equals" class="headerlink" title="==和equals"></a>==和equals</h5><p>对于基本类型和引用类型==的作用效果是不一样的</p><ul><li>基本类型：比较的是值是否相同.</li><li>引用类型：比较的是引用是否相同.</li></ul><p>equals本质上就是==，只不过String和Integer等重写了equals方法，把它变成了值比较。</p><ul><li>String a = “string”;</li><li>String b = “string”;</li><li>String c = new String(“string”);</li><li>Sytem.out.println(a==b);//true</li><li>Sytem.out.println(a==c);//false</li><li>Sytem.out.println(a.equals(b));//true</li><li>Sytem.out.println(a.equals(c));//true</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>使用hexo搭建个人博客</title>
       <link href="/2019/05/06/CreateBlogByHexo/"/>
       <url>/2019/05/06/CreateBlogByHexo/</url>
@@ -77,6 +52,31 @@
     </entry>
     
     
+    
+    <entry>
+      <title>java知识回顾</title>
+      <link href="/2019/05/06/java01/"/>
+      <url>/2019/05/06/java01/</url>
+      
+        <content type="html"><![CDATA[<h5 id="Java是什么？"><a href="#Java是什么？" class="headerlink" title="Java是什么？"></a>Java是什么？</h5><p><a href="https://baike.baidu.com/item/Java/85979" target="_blank" rel="noopener">Java</a>是一门<a href="https://baike.baidu.com/item/面向对象" target="_blank" rel="noopener">面向对象</a>编程语言，不仅吸收了<a href="https://baike.baidu.com/item/C%2B%2B" target="_blank" rel="noopener">C++</a>语言的各种优点，还摒弃了C++里难以理解的<a href="https://baike.baidu.com/item/多继承" target="_blank" rel="noopener">多继承</a>、<a href="https://baike.baidu.com/item/指针/2878304" target="_blank" rel="noopener">指针</a>等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程  。</p><p>Java具有简单性、面向对象、<a href="https://baike.baidu.com/item/分布式/19276232" target="_blank" rel="noopener">分布式</a>、<a href="https://baike.baidu.com/item/健壮性/4430133" target="_blank" rel="noopener">健壮性</a>、<a href="https://baike.baidu.com/item/安全性/7664678" target="_blank" rel="noopener">安全性</a>、平台独立与可移植性、<a href="https://baike.baidu.com/item/多线程/1190404" target="_blank" rel="noopener">多线程</a>、动态性等特点  。Java可以编写<a href="https://baike.baidu.com/item/桌面应用程序/2331979" target="_blank" rel="noopener">桌面应用程序</a>、<a href="https://baike.baidu.com/item/Web应用程序" target="_blank" rel="noopener">Web应用程序</a>、<a href="https://baike.baidu.com/item/分布式系统/4905336" target="_blank" rel="noopener">分布式系统</a>和<a href="https://baike.baidu.com/item/嵌入式系统/186978" target="_blank" rel="noopener">嵌入式系统</a>应用程序等</p><h5 id="JDK与JRE"><a href="#JDK与JRE" class="headerlink" title="JDK与JRE"></a>JDK与JRE</h5><ul><li><p>JRE(Java Runtime Environment)：Java运行环境，为Java的运行提供了环境.</p></li><li><p>JDK(Java Devolopment Kit)：Java开发工具包，提供了Java的开发环境与运行环境.</p><p>注:JDK包含了JRE也包含编译Java源码的Javac以及很多Java程序调试和分析的工具。如果只运行Java程序的话，只需要安装JRE就行了，要编写Java程序就需要安装JDK.</p></li></ul><h5 id="和equals"><a href="#和equals" class="headerlink" title="==和equals"></a>==和equals</h5><p>对于基本类型和引用类型==的作用效果是不一样的</p><ul><li>基本类型：比较的是值是否相同.</li><li>引用类型：比较的是引用是否相同.</li></ul><p>equals本质上就是==，只不过String和Integer等重写了equals方法，把它变成了值比较。</p><ul><li>String a = “string”;</li><li>String b = “string”;</li><li>String c = new String(“string”);</li><li>Sytem.out.println(a==b);//true</li><li>Sytem.out.println(a==c);//false</li><li>Sytem.out.println(a.equals(b));//true</li><li>Sytem.out.println(a.equals(c));//true</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
     
@@ -93,9 +93,9 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>favicons</title>
+      <link href="/favicons/index.html"/>
+      <url>/favicons/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -104,9 +104,9 @@
     
     
     <entry>
-      <title>favicons</title>
-      <link href="/favicons/index.html"/>
-      <url>/favicons/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
