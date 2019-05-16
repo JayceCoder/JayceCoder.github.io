@@ -236,7 +236,7 @@
 - Sytem.out.println(a.equals(b));//true
 - Sytem.out.println(a.equals(c));//true
 </code></pre><h4 id="final在Java中的作用"><a href="#final在Java中的作用" class="headerlink" title="final在Java中的作用"></a>final在Java中的作用</h4><ul>
-<li>final修饰的类叫最终类，该类不能被继承。</li>
+<li>final修饰的类叫最终类，该类不能被继承。final不能修饰抽象类</li>
 <li>final修饰的方法不能被重写。</li>
 <li>final修饰的变量叫做常量，常量必须初始化，初始化之后不能被修改。</li>
 </ul>
@@ -258,7 +258,38 @@
 - toUpperCase();将字符串转成大写字符
 - substring();截取字符串
 - equals();字符串比较
-</code></pre>
+</code></pre><h4 id="普通类和抽象类"><a href="#普通类和抽象类" class="headerlink" title="普通类和抽象类"></a>普通类和抽象类</h4><ul>
+<li>普通类不能包含抽象方法，抽象类可以包含抽象方法</li>
+<li>抽象类不能直接实例化，普通类可以直接实例化</li>
+</ul>
+<h4 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h4><ul>
+<li>实现：抽象类的子类使用extends继承，接口必须使用implements实现</li>
+<li>构造函数：抽象类可以有构造函数，接口不能有</li>
+<li>实现数量：类可以实现很多个接口，但是只能继承一个抽象类</li>
+<li>访问修饰符：接口中的默认方法是public修饰，抽象类中的方法可以使任意访问修饰符</li>
+</ul>
+<h4 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h4><ul>
+<li>按功能来分：输入流（input） 、输出流（output）</li>
+<li>按类型来分：字节流和字符流</li>
+<li>字符流和字节流的区别是字节流按8位传输以字节位单位输入输出数据，字符流按16位传输以字符为单位输入输出数据</li>
+</ul>
+<h4 id="BIO、BIO、AIO"><a href="#BIO、BIO、AIO" class="headerlink" title="BIO、BIO、AIO"></a>BIO、BIO、AIO</h4><ul>
+<li>BIO：Block IO 同步阻塞式IO，就是平常使用的传统IO，他的特点是模式简单使用方便，并发处理能力低</li>
+<li>NIO：New IO同步非阻塞式IO，是传统IO的升级，客户端和服务端通过Channel（通道）通讯，实现了多路复用</li>
+<li>AIO：Asynchronous IO是NIO的升级，也叫NIO2，实现了异步非阻塞式IO，异步IO的操作基于事件和回调机制</li>
+</ul>
+<h4 id="Files的常用方法"><a href="#Files的常用方法" class="headerlink" title="Files的常用方法"></a>Files的常用方法</h4><ul>
+<li>Files.exists();检测文件路径是否存在</li>
+<li>Files.createFile();创建文件</li>
+<li>Files.createDirectory();创建文件夹</li>
+<li>Files.delete();删除一个文件或者目录</li>
+<li>Files.copy();复制文件</li>
+<li>Files.move();移动文件</li>
+<li>Files.size();查看文件个数</li>
+<li>Files.read();读取文件</li>
+<li>Files.write();写入文件</li>
+</ul>
+
     </main>
     <footer class="post-footer">
       
@@ -275,10 +306,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
+      <a href="/2019/05/06/s1/" rel="next" title="常用dos命令"><i class="fas fa-angle-left"></i><span class="nav-title">常用dos命令</span></a>
+      
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2019/05/06/s1/" rel="prev" title="常用dos命令"><span class="nav-title">常用dos命令</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -360,7 +391,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#Java是什么？"><span class="toc-text">Java是什么？</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#JDK与JRE"><span class="toc-text">JDK与JRE</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#基本数据类型"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#和equals"><span class="toc-text">==和equals</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#final在Java中的作用"><span class="toc-text">final在Java中的作用</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#操作字符串的类"><span class="toc-text">操作字符串的类</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#String类的常用方法"><span class="toc-text">String类的常用方法</span></a></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#Java是什么？"><span class="toc-text">Java是什么？</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#JDK与JRE"><span class="toc-text">JDK与JRE</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#基本数据类型"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#和equals"><span class="toc-text">==和equals</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#final在Java中的作用"><span class="toc-text">final在Java中的作用</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#操作字符串的类"><span class="toc-text">操作字符串的类</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#String类的常用方法"><span class="toc-text">String类的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#普通类和抽象类"><span class="toc-text">普通类和抽象类</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#接口和抽象类"><span class="toc-text">接口和抽象类</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#IO流"><span class="toc-text">IO流</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#BIO、BIO、AIO"><span class="toc-text">BIO、BIO、AIO</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#Files的常用方法"><span class="toc-text">Files的常用方法</span></a></li></ol></div>
     </div>
     
     
