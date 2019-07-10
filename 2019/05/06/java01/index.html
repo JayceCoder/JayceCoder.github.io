@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>java知识回顾 | Jayce Blog - be what your wanna be</title>
+    <title>java面试专题 | Jayce Blog - be what your wanna be</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -186,7 +186,7 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">java知识回顾</h1>
+      <h1 class="post-title" itemprop="name headline">java面试专题</h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -228,6 +228,7 @@
 <li>引用类型：比较的是引用是否相同。</li>
 </ul>
 <p>equals本质上就是==，只不过String和Integer等重写了equals方法，把它变成了值比较。</p>
+<p>​    </p>
 <pre><code>- String a = &quot;string&quot;;
 - String b = &quot;string&quot;;
 - String c = new String(&quot;string&quot;);
@@ -278,18 +279,16 @@
 <li>NIO：New IO同步非阻塞式IO，是传统IO的升级，客户端和服务端通过Channel（通道）通讯，实现了多路复用</li>
 <li>AIO：Asynchronous IO是NIO的升级，也叫NIO2，实现了异步非阻塞式IO，异步IO的操作基于事件和回调机制</li>
 </ul>
-<h4 id="Files的常用方法"><a href="#Files的常用方法" class="headerlink" title="Files的常用方法"></a>Files的常用方法</h4><ul>
-<li>Files.exists();检测文件路径是否存在</li>
-<li>Files.createFile();创建文件</li>
-<li>Files.createDirectory();创建文件夹</li>
-<li>Files.delete();删除一个文件或者目录</li>
-<li>Files.copy();复制文件</li>
-<li>Files.move();移动文件</li>
-<li>Files.size();查看文件个数</li>
-<li>Files.read();读取文件</li>
-<li>Files.write();写入文件</li>
-</ul>
-
+<h4 id="Files的常用方法"><a href="#Files的常用方法" class="headerlink" title="Files的常用方法"></a>Files的常用方法</h4><pre><code>- Files.exists();检测文件路径是否存在
+- Files.createFile();创建文件
+- Files.createDirectory();创建文件夹
+- Files.delete();删除一个文件或者目录
+- Files.copy();复制文件
+- Files.move();移动文件
+- Files.size();查看文件个数
+- Files.read();读取文件
+- Files.write();写入文件
+</code></pre>
     </main>
     <footer class="post-footer">
       
@@ -306,10 +305,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
+      <a href="/2019/05/06/CreateBlogByHexo/" rel="next" title="使用hexo搭建个人博客"><i class="fas fa-angle-left"></i><span class="nav-title">使用hexo搭建个人博客</span></a>
+      
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/05/06/s1/" rel="prev" title="常用dos命令"><span class="nav-title">常用dos命令</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/07/10/java基础01/" rel="prev" title="java基础01"><span class="nav-title">java基础01</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -353,7 +354,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">3</a></div>
+      <div><a href="/archives/">4</a></div>
     </div>
     
     
