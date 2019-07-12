@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> it </category>
+          <category> java </category>
           
       </categories>
       
@@ -140,9 +140,9 @@
     
     
     <entry>
-      <title>img</title>
-      <link href="/img/index.html"/>
-      <url>/img/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -151,9 +151,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>img</title>
+      <link href="/img/index.html"/>
+      <url>/img/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
