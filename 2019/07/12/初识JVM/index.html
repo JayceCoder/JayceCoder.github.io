@@ -223,6 +223,8 @@
 <p>根据Java虚拟机规范的规定，Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可。不过在实现上，既可以实现成固定大小的也可以实现成可扩展的，当前主流的虚拟机都是按照可扩展来实现的(通过-Xmx和-Xms控制)。如果在堆中没有内存来完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。</p>
 <h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区（Method Area）与Java堆一样，是各个线程共享的内存区域，它用于存储已被虚 拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规 范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆）。</p>
 <h3 id="运行时常量"><a href="#运行时常量" class="headerlink" title="运行时常量"></a>运行时常量</h3><p>运行时常量池（Runtime Constant Pool）是方法区的一部分。Class文件中除了有类的版 本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table），用于 存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常 量池中存放。 </p>
+<hr>
+<p>—–学习自《深入理解Java虚拟机》</p>
 
     </main>
     <footer class="post-footer">
@@ -235,6 +237,29 @@
       
     </footer>
   </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.png" alt="微信支付">
+      <span>微信支付</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.png" alt="支付宝">
+      <span>支付宝</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
   
   
   <nav class="page-nav">
@@ -337,9 +362,9 @@
         
         <li><i class="fas fa-envelope"></i><a href="mailto:jaycecoder@hotmail.com" target="_blank">E-Mail</a></li>
         
-        <li><i class="fab fa-github"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><i class="fab fa-github"></i><a href="https://jaycecoder.github.io/" target="_blank">GitHub</a></li>
         
-        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/678668540" target="_blank">Weibo</a></li>
         
       </ul>
     </div>

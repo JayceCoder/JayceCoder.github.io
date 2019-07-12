@@ -8,7 +8,7 @@
       <link href="/2019/07/12/%E5%88%9D%E8%AF%86JVM/"/>
       <url>/2019/07/12/%E5%88%9D%E8%AF%86JVM/</url>
       
-        <content type="html"><![CDATA[<h2 id="Java运行时数据区域"><a href="#Java运行时数据区域" class="headerlink" title="Java运行时数据区域"></a>Java运行时数据区域</h2><p>Java虚拟机在执行Java程序时，会把它所管理的内存划分为若干个不同的数据区域。这些区域都有各自的用途，以及创建和销毁时间，有些区域会随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而建立和销毁。</p><p><img src="\img\1562812338881.png" alt="1562812338881"></p><h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器是一块较小的内存空间，它可以看作当前线程执行字节码文件时的行号指示器，在虚拟机的概念模型里，字节码解释器的工作就是通过改变计数器的值来选取下一条需要执行的字节码指令。</p><p>由于Java虚拟机的多线程是线程轮流切换并分配处理器执行时间的方式实现的，在任何一个确定的时刻，一个处理器只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器，各条线程之间程序计数器互不影响，独立储存，我们称这类内存区域为“线程私有”的内存。</p><p>如果线程正在执行的是一个java方法，那么程序计数器记录的就是正在执行的虚拟机字节码指令地址；如果线程正在执行的是一个native方法，那么程序计数器记录的值为null。</p><p>此内存区域是唯一一个在虚拟机内存规范中没有规定任何OutOfMemoryError情况的区域。</p><h3 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h3><p>虚拟机栈也是线程私有的，他的生命周期和线程相同。虚拟机栈描述的是java方法执行时的内存模型：每个方法执行的同时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接方法出口等信息。每个方法从调用直至执行完成的过程就对应一个栈帧从虚拟机中从入栈到出栈的过程。</p><p>局部变量表存放了编译器可知的各种基础数据类型、医用类型和ReturnAddress类型。</p><p>在Java虚拟机规范中，对这个区域规定了两种异常情况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，如果扩展时无法申请到足够的内存，就会抛出OutOfMemoryError异常。</p><h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>本地方法栈是虚拟机适用到的native方法服务的，虚拟机规范中没有对本地方法栈使用的语言、使用方式、数据结构进行强制规定，因此具体的虚拟机可以自由的实现它。有的虚拟机把本地方法栈和虚拟机栈合二为一(如HotSpot虚拟机)，本地方法栈也会抛出StackOverflowError和OutOfMemoryError异常。</p><h3 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h3><p>对于大多数应用来说，Java堆是虚拟机内存中最大的一块，Java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在Java堆中分配内存。</p><p>Java堆是垃圾收集器管理的主要区域，因此很多时刻也被称为“GC堆”。从内存回收的角度来看，由于现在收集器基 本都采用分代收集算法，所以Java堆中还可以细分为：新生代和老年代；再细致一点的有 Eden空间、From Survivor空间、To Survivor空间等。从内存分配的角度来看，线程共享的 Java堆中可能划分出多个线程私有的分配缓冲区（Thread Local Allocation Buffer,TLAB）。不 过无论如何划分，都与存放内容无关，无论哪个区域，存储的都仍然是对象实例，进一步划 分的目的是为了更好地回收内存，或者更快地分配内存。</p><p>根据Java虚拟机规范的规定，Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可。不过在实现上，既可以实现成固定大小的也可以实现成可扩展的，当前主流的虚拟机都是按照可扩展来实现的(通过-Xmx和-Xms控制)。如果在堆中没有内存来完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。</p><h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区（Method Area）与Java堆一样，是各个线程共享的内存区域，它用于存储已被虚 拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规 范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆）。</p><h3 id="运行时常量"><a href="#运行时常量" class="headerlink" title="运行时常量"></a>运行时常量</h3><p>运行时常量池（Runtime Constant Pool）是方法区的一部分。Class文件中除了有类的版 本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table），用于 存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常 量池中存放。 </p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Java运行时数据区域"><a href="#Java运行时数据区域" class="headerlink" title="Java运行时数据区域"></a>Java运行时数据区域</h2><p>Java虚拟机在执行Java程序时，会把它所管理的内存划分为若干个不同的数据区域。这些区域都有各自的用途，以及创建和销毁时间，有些区域会随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而建立和销毁。</p><p><img src="\img\1562812338881.png" alt="1562812338881"></p><h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器是一块较小的内存空间，它可以看作当前线程执行字节码文件时的行号指示器，在虚拟机的概念模型里，字节码解释器的工作就是通过改变计数器的值来选取下一条需要执行的字节码指令。</p><p>由于Java虚拟机的多线程是线程轮流切换并分配处理器执行时间的方式实现的，在任何一个确定的时刻，一个处理器只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器，各条线程之间程序计数器互不影响，独立储存，我们称这类内存区域为“线程私有”的内存。</p><p>如果线程正在执行的是一个java方法，那么程序计数器记录的就是正在执行的虚拟机字节码指令地址；如果线程正在执行的是一个native方法，那么程序计数器记录的值为null。</p><p>此内存区域是唯一一个在虚拟机内存规范中没有规定任何OutOfMemoryError情况的区域。</p><h3 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h3><p>虚拟机栈也是线程私有的，他的生命周期和线程相同。虚拟机栈描述的是java方法执行时的内存模型：每个方法执行的同时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接方法出口等信息。每个方法从调用直至执行完成的过程就对应一个栈帧从虚拟机中从入栈到出栈的过程。</p><p>局部变量表存放了编译器可知的各种基础数据类型、医用类型和ReturnAddress类型。</p><p>在Java虚拟机规范中，对这个区域规定了两种异常情况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，如果扩展时无法申请到足够的内存，就会抛出OutOfMemoryError异常。</p><h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>本地方法栈是虚拟机适用到的native方法服务的，虚拟机规范中没有对本地方法栈使用的语言、使用方式、数据结构进行强制规定，因此具体的虚拟机可以自由的实现它。有的虚拟机把本地方法栈和虚拟机栈合二为一(如HotSpot虚拟机)，本地方法栈也会抛出StackOverflowError和OutOfMemoryError异常。</p><h3 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h3><p>对于大多数应用来说，Java堆是虚拟机内存中最大的一块，Java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在Java堆中分配内存。</p><p>Java堆是垃圾收集器管理的主要区域，因此很多时刻也被称为“GC堆”。从内存回收的角度来看，由于现在收集器基 本都采用分代收集算法，所以Java堆中还可以细分为：新生代和老年代；再细致一点的有 Eden空间、From Survivor空间、To Survivor空间等。从内存分配的角度来看，线程共享的 Java堆中可能划分出多个线程私有的分配缓冲区（Thread Local Allocation Buffer,TLAB）。不 过无论如何划分，都与存放内容无关，无论哪个区域，存储的都仍然是对象实例，进一步划 分的目的是为了更好地回收内存，或者更快地分配内存。</p><p>根据Java虚拟机规范的规定，Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可。不过在实现上，既可以实现成固定大小的也可以实现成可扩展的，当前主流的虚拟机都是按照可扩展来实现的(通过-Xmx和-Xms控制)。如果在堆中没有内存来完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。</p><h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区（Method Area）与Java堆一样，是各个线程共享的内存区域，它用于存储已被虚 拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规 范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆）。</p><h3 id="运行时常量"><a href="#运行时常量" class="headerlink" title="运行时常量"></a>运行时常量</h3><p>运行时常量池（Runtime Constant Pool）是方法区的一部分。Class文件中除了有类的版 本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table），用于 存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常 量池中存放。 </p><hr><p>—–学习自《深入理解Java虚拟机》</p>]]></content>
       
       
       <categories>
@@ -118,17 +118,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>favicons</title>
       <link href="/favicons/index.html"/>
       <url>/favicons/index.html</url>
@@ -140,9 +129,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -154,6 +143,17 @@
       <title>img</title>
       <link href="/img/index.html"/>
       <url>/img/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
