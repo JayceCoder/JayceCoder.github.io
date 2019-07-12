@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>java基础01 | Jayce Blog - be what your wanna be</title>
+    <title>初识JVM | Jayce Blog - be what your wanna be</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -175,7 +175,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/10/java基础01/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/初识JVM/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="Jayce">
        <meta itemprop="description" content="a coder">
@@ -186,11 +186,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">java基础01</h1>
+      <h1 class="post-title" itemprop="name headline">初识JVM</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-10T11:20:36+08:00">2019-07-10 11:20:36</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-12T15:20:36+08:00">2019-07-12 15:20:36</time></span>
         </span>
         
         
@@ -199,7 +199,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">it</span></a></span>
         </span>
         
         
@@ -208,60 +208,28 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h3 id="什么是Java语言"><a href="#什么是Java语言" class="headerlink" title="什么是Java语言"></a>什么是Java语言</h3><p>Java语言是美国Sun公司（Stanford University Network），在1995年推出的高级编程语言。所谓编程语言，是计算机的语言，人们可以使用编程语言对计算机下达命令，让计算机完成人们需要的功能。</p>
-<h3 id="Java语言发展历史"><a href="#Java语言发展历史" class="headerlink" title="Java语言发展历史"></a>Java语言发展历史</h3><ul>
-<li>1995年Sun公司发布Java1.0版本</li>
-<li>1997年发布Java1.1版本</li>
-<li>1998年发布Java1.2版本</li>
-<li>2000年发布Java1.3版本</li>
-<li>2002年发布Java1.4版本</li>
-<li>2004年发布Java 5版本</li>
-<li>2006年发布Java 6版本</li>
-<li>2009年Oracle甲骨文公司收购Sun公司，并与2011年发布Java 7版本</li>
-<li>2014年发布Java 8版本</li>
-<li>2017年9月发布Java 9版本</li>
-<li>2018年3月发布Java 10版本</li>
-</ul>
-<h3 id="计算机进制转换"><a href="#计算机进制转换" class="headerlink" title="计算机进制转换"></a>计算机进制转换</h3><p><img src="/img/1562766826167.png" alt="1562766826167"></p>
-<h3 id="计算机存储单元"><a href="#计算机存储单元" class="headerlink" title="计算机存储单元"></a>计算机存储单元</h3><p>位(bit)：一个数字0或者一个数字1，代表一位。</p>
-<p>字节(Byte)：每逢8位是一个字节，这是数据存储的最小单位。</p>
-<p>1Byte = 8bit</p>
-<p>1KB=1024Byte</p>
-<p>1MB=1024KB</p>
-<p>1GB=1024MB</p>
-<p>1TB=1024GB</p>
-<h3 id="命令提示符"><a href="#命令提示符" class="headerlink" title="命令提示符"></a>命令提示符</h3><p>MS-DOS（MicroSoft-Disk Operating System）</p>
-<p>命令提示符（cmd）</p>
-<p>启动：Win+R，输入cmd回车</p>
-<p>切换盘符：盘符名称:</p>
-<p>进入文件夹：cd 文件夹名</p>
-<p>进入多级文件夹：cd 文件夹1\文件夹2、\文件夹3</p>
-<p>返回上一级：cd..</p>
-<p>清屏：cls</p>
-<p>直接回根目录：cd \</p>
-<p>查看当前内容：dir</p>
-<p>退出：exit</p>
-<h3 id="Java语言的跨平台性"><a href="#Java语言的跨平台性" class="headerlink" title="Java语言的跨平台性"></a>Java语言的跨平台性</h3><ul>
-<li>JVM（Java Virtual Machine）：java虚拟机，简称JVM，是运行所以java程序的家乡计算机，是Java程序的运行环境，是Java最具希灵里的特征之一。我们编写的Java代码，都运行在JVM之上。</li>
-<li>跨平台：任何软件的运行都必须运行在操作系统之上，而我们用Java编写的软件可以运行在任何的操作系统上，这个特性称为Java语言的跨平台特性。该特性是由JVM实现的，我们编写的程序运行在JVM之上，而JVM运行在操作系统之上。</li>
-</ul>
-<p><img src="/img/1562770008146.png" alt="1562770008146"></p>
-<h3 id="JDK、JRE、JVM"><a href="#JDK、JRE、JVM" class="headerlink" title="JDK、JRE、JVM"></a>JDK、JRE、JVM</h3><ul>
-<li><p>JRE（Java Runtime Enviroment）：是Java程序的运行时环境，包含JVM和运行时所需的核心类库。</p>
-</li>
-<li><p>JDK（Java Devolopment Kit）：是Java程序的开发工具包，包含JRE和开发人员使用的工具。</p>
-<p>我们想要运行一个已有的Java程序，只需要安装JRE即可</p>
-<p>我们想要开发一个全新的Java程序，那么需要安装JDK。</p>
-</li>
-</ul>
-<p><img src="/img/1562770238299.png" alt="1562770238299"></p>
+      <h2 id="Java运行时数据区域"><a href="#Java运行时数据区域" class="headerlink" title="Java运行时数据区域"></a>Java运行时数据区域</h2><p>Java虚拟机在执行Java程序时，会把它所管理的内存划分为若干个不同的数据区域。这些区域都有各自的用途，以及创建和销毁时间，有些区域会随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而建立和销毁。</p>
+<p><img src="\img\1562812338881.png" alt="1562812338881"></p>
+<h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器是一块较小的内存空间，它可以看作当前线程执行字节码文件时的行号指示器，在虚拟机的概念模型里，字节码解释器的工作就是通过改变计数器的值来选取下一条需要执行的字节码指令。</p>
+<p>由于Java虚拟机的多线程是线程轮流切换并分配处理器执行时间的方式实现的，在任何一个确定的时刻，一个处理器只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器，各条线程之间程序计数器互不影响，独立储存，我们称这类内存区域为“线程私有”的内存。</p>
+<p>如果线程正在执行的是一个java方法，那么程序计数器记录的就是正在执行的虚拟机字节码指令地址；如果线程正在执行的是一个native方法，那么程序计数器记录的值为null。</p>
+<p>此内存区域是唯一一个在虚拟机内存规范中没有规定任何OutOfMemoryError情况的区域。</p>
+<h3 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h3><p>虚拟机栈也是线程私有的，他的生命周期和线程相同。虚拟机栈描述的是java方法执行时的内存模型：每个方法执行的同时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接方法出口等信息。每个方法从调用直至执行完成的过程就对应一个栈帧从虚拟机中从入栈到出栈的过程。</p>
+<p>局部变量表存放了编译器可知的各种基础数据类型、医用类型和ReturnAddress类型。</p>
+<p>在Java虚拟机规范中，对这个区域规定了两种异常情况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，如果扩展时无法申请到足够的内存，就会抛出OutOfMemoryError异常。</p>
+<h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>本地方法栈是虚拟机适用到的native方法服务的，虚拟机规范中没有对本地方法栈使用的语言、使用方式、数据结构进行强制规定，因此具体的虚拟机可以自由的实现它。有的虚拟机把本地方法栈和虚拟机栈合二为一(如HotSpot虚拟机)，本地方法栈也会抛出StackOverflowError和OutOfMemoryError异常。</p>
+<h3 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h3><p>对于大多数应用来说，Java堆是虚拟机内存中最大的一块，Java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在Java堆中分配内存。</p>
+<p>Java堆是垃圾收集器管理的主要区域，因此很多时刻也被称为“GC堆”。从内存回收的角度来看，由于现在收集器基 本都采用分代收集算法，所以Java堆中还可以细分为：新生代和老年代；再细致一点的有 Eden空间、From Survivor空间、To Survivor空间等。从内存分配的角度来看，线程共享的 Java堆中可能划分出多个线程私有的分配缓冲区（Thread Local Allocation Buffer,TLAB）。不 过无论如何划分，都与存放内容无关，无论哪个区域，存储的都仍然是对象实例，进一步划 分的目的是为了更好地回收内存，或者更快地分配内存。</p>
+<p>根据Java虚拟机规范的规定，Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可。不过在实现上，既可以实现成固定大小的也可以实现成可扩展的，当前主流的虚拟机都是按照可扩展来实现的(通过-Xmx和-Xms控制)。如果在堆中没有内存来完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。</p>
+<h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区（Method Area）与Java堆一样，是各个线程共享的内存区域，它用于存储已被虚 拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规 范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆）。</p>
+<h3 id="运行时常量"><a href="#运行时常量" class="headerlink" title="运行时常量"></a>运行时常量</h3><p>运行时常量池（Runtime Constant Pool）是方法区的一部分。Class文件中除了有类的版 本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table），用于 存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常 量池中存放。 </p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/java/" rel="tag"><i class="fas fa-tags"></i>java</a>
+        <a class="post-tag button" href="/tags/JVM/" rel="tag"><i class="fas fa-tags"></i>JVM</a>
         
       </div>
       
@@ -272,12 +240,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/05/06/CreateBlogByHexo/" rel="next" title="使用hexo搭建个人博客"><i class="fas fa-angle-left"></i><span class="nav-title">使用hexo搭建个人博客</span></a>
+      <a href="/2019/07/10/java基础01/" rel="next" title="java基础01"><i class="fas fa-angle-left"></i><span class="nav-title">java基础01</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2019/07/12/初识JVM/" rel="prev" title="初识JVM"><span class="nav-title">初识JVM</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -359,7 +325,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#什么是Java语言"><span class="toc-text">什么是Java语言</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Java语言发展历史"><span class="toc-text">Java语言发展历史</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#计算机进制转换"><span class="toc-text">计算机进制转换</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#计算机存储单元"><span class="toc-text">计算机存储单元</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#命令提示符"><span class="toc-text">命令提示符</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Java语言的跨平台性"><span class="toc-text">Java语言的跨平台性</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#JDK、JRE、JVM"><span class="toc-text">JDK、JRE、JVM</span></a></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Java运行时数据区域"><span class="toc-text">Java运行时数据区域</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#程序计数器"><span class="toc-text">程序计数器</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Java虚拟机栈"><span class="toc-text">Java虚拟机栈</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#本地方法栈"><span class="toc-text">本地方法栈</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Java堆"><span class="toc-text">Java堆</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#方法区"><span class="toc-text">方法区</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#运行时常量"><span class="toc-text">运行时常量</span></a></li></ol></li></ol></div>
     </div>
     
     
